@@ -1,5 +1,5 @@
 # require-seed-project
-使用jquery+requirejs模块化开发种子项目
+使用jquery+requirejs+gulp+less进行模块化开发的种子文件
 
 ## 使用方式
 ```
