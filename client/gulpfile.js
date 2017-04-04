@@ -103,7 +103,10 @@ gulp.task('scripts', function() {
 		// 压缩
 		// 重命名为 folder.min.js
 		// 再一次写入输出
-		return gulp.src(path.join(modulesPath, folder, '/**/*.js'))
+		return gulp.src([
+			path.join(modulesPath, folder, '/js/'+folder+'.js'),
+			path.join(modulesPath, folder, '/js/!('+folder+').js')
+		])
 			.pipe(concat(folder + '.js'))
 			.pipe(uglify())
 			.pipe(rename(folder + '.js'))
